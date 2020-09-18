@@ -69,36 +69,10 @@ resource "aws_instance" "server-3" {
    }
 } 
 
-/* resource "aws_lb_target_group" "tg" {
+resource "aws_lb_target_group" "tg" {
   name     = "AWS-NLB-TG"
   port     = 80
   protocol = "TCP"
   vpc_id   = "vpc-03fce764d6d3fdd1f"
 }
 
-resource "aws_lb_target_group_attachment" "tg" {
-  target_group_arn = aws_lb_target_group.tg.arn
-  target_id        = aws_instance.server-1.id
-  port             = 80
-}
-
-resource "aws_lb_target_group_attachment" "tg" {
-  target_group_arn = aws_lb_target_group.tg.arn
-  target_id        = aws_instance.server-2.id
-  port             = 80
-}
-
-resource "aws_lb_target_group_attachment" "tg" {
-  target_group_arn = aws_lb_target_group.tg.arn
-  target_id        = aws_instance.server-3.id
-  port             = 80
-}
-
-resource "aws_lb" "nlb" {
-  name               = "aws-nlb"
-  internal           = false
-  load_balancer_type = "network"
-  subnets            = [aws_subnet.public.*.id]
-  enable_deletion_protection = true
- 
-} */
