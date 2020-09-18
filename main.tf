@@ -69,7 +69,7 @@ resource "aws_instance" "server-3" {
    }
 } 
 
-resource "aws_lb_target_group" "tg" {
+/* resource "aws_lb_target_group" "tg" {
   name     = "AWS-NLB-TG"
   port     = 80
   protocol = "TCP"
@@ -99,7 +99,6 @@ resource "aws_lb" "nlb" {
   internal           = false
   load_balancer_type = "network"
   subnets            = [aws_subnet.public.*.id]
-
   enable_deletion_protection = true
  
-}
+} */
