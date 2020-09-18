@@ -76,3 +76,12 @@ resource "aws_lb_target_group" "tg" {
   vpc_id   = "vpc-03fce764d6d3fdd1f"
 }
 
+resource "aws_lb" "nlb" {
+  name               = "aws-nlb"
+  internal           = false
+  load_balancer_type = "network"
+  subnets            = ["subnet-034250c45e4a08fbf","subnet-0d47b4ff30b766a68","subnet-0e603ab3ebf20d410"]
+
+ 
+} 
+
