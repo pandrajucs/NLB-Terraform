@@ -84,8 +84,5 @@ resource "aws_lb" "nlb" {
 
 } 
 
-data "aws_route53_zone" "r53" {
-  name = "pandrajucs.in"
-  private_zone = false
-}
+
 
