@@ -82,6 +82,10 @@ resource "aws_lb" "nlb" {
   load_balancer_type = "network"
   subnets            = ["subnet-034250c45e4a08fbf","subnet-0d47b4ff30b766a68","subnet-0e603ab3ebf20d410"]
 
- 
 } 
+
+data "aws_route53_zone" "r53" {
+  name = "pandrajucs.in"
+  private_zone = false
+}
 
